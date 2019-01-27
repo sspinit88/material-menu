@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+// overlay на всю высоту
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.tabsAny {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+
+  height: 50px;
+  width: 100%;
+  background: gray;
+}
+
+.textAny {
+  padding: 10px;
+}
