@@ -5,6 +5,7 @@
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
+                <!--удали [opened], [mode]='over' - удали все остальное ссылающиеся на isHandset$ для получения простого функционала-->
     <mat-toolbar>Меню!</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Link 1</a>
