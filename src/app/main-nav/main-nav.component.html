@@ -2,25 +2,32 @@
   <mat-sidenav #drawer
                class="sidenav"
                fixedInViewport="true"
-               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'"
-               [opened]="!(isHandset$ | async)">
+               [mode]="'over'">
                 <!--удали [opened], [mode]='over' - удали все остальное ссылающиеся на isHandset$ для получения простого функционала-->
-    <mat-toolbar>Меню!</mat-toolbar>
+    <mat-toolbar  class="mat-toolbar"
+                  color="danger">
+      <div class="menuTopBlock">
+        <div class="menuTopBlock__name">
+          Alex Freeman
+        </div>
+        <div class="menuTopBlock__balance">
+          balance $58
+        </div>
+      </div>
+    </mat-toolbar>
     <mat-nav-list>
       <a mat-list-item href="#">Link 1</a>
       <a mat-list-item href="#">Link 2</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content class="mat-sidenav-content">
     <mat-toolbar color="primary">
       <button
               type="button"
               aria-label="Toggle sidenav"
               mat-icon-button
-              (click)="drawer.toggle()"
-              *ngIf="isHandset$ | async">
+              (click)="drawer.toggle()">
         <!--добавить *ngIf="isHandset$ | async"-->
         <mat-icon aria-label="Side nav toggle icon">BTN!</mat-icon>
       </button>
